@@ -2,104 +2,59 @@ const { Post } = require('../models');
 
 const postdata = [
   {
-    title: 'JavaScript Expert: available 2023-11-04 from 08:00AM till 10:00AM.',
-    post_text: '8 years programming exprience on front-end, have two hours expertise available to share online. From 08:00AM to 10:00AM at 2023-11-04 Saturday Morning. If you interested please contact me by email: peterpan@gmail.com',
-    user_id: 10
-  },
-  {
-    title: 'CSS & Tailwind Expert: available 2023-11-05 from 10:00AM till 11:30AM.',
-    post_text: '10 years programming exprience on front-end, have 1.5 hours expertise available to share online. From 10:00AM to 11:30AM at 2023-11-04 Sunday Morning. If you interested please contact me by email: user2@gmail.com',
-    user_id: 8
-  },
-  {
-    title: 'Database Expert: available 2023-11-05 from 02:00PM till 04:00PM.',
-    post_text: '15 years programming exprience on back-end, have 2 hours expertise within MySQL available to share online. From 02:00PM to 04:0PM at 2023-11-05 Sunday Afternoon. If you interested please contact me by email: user3@gmail.com',
+    title: 'Front-end Technologies, A Detailed Guide',
+    post_text: 'JavaScript. Front-end frameworks. Frameworks offer a platform for the best possible use of programming languages.',
     user_id: 1
   },
   {
-    title: 'TEST Expert: available 2023-11-05 from 02:00PM till 04:00PM.',
-    post_text: '2 years software-testing exprience, have 2 hours expertise with ESLint & Prettier available to share online. From 02:00PM to 04:0PM at 2023-11-05 Sunday Afternoon. If you interested please contact me by email: user4@gmail.com',
+    title: 'Why developers need career coaching',
+    post_text: 'Take the growing demand for JavaScript. In 2018, reports Hackerrank , 73% of developers said they knew JavaScript.',
     user_id: 4
   },
   {
-    title: 'JavaScript Expert: available 2023-11-04 from 08:00AM till 10:00AM.',
-    post_text: '8 years programming exprience on front-end, have two hours expertise available to share online. From 08:00AM to 10:00AM at 2023-11-04 Saturday Morning. If you interested please contact me by email: user5@gmail.com',
-    user_id: 7
-  },
-  {
-    title: 'HTML & CSS Expert: available 2023-11-05 from 10:00AM till 11:30AM.',
-    post_text: '5 years programming exprience on front-end, have 1.5 hours expertise available to share online. From 10:00AM to 11:30AM at 2023-11-04 Sunday Morning. If you interested please contact me by email: user6@gmail.com',
+    title: 'Node.JS VS PHP, in a nutshell.',
+    post_text: 'Node.js made it possible to use JavaScript on the back-end when it was introduced in 2009, bringing the rise of web applications with entirely JavaScript-powered.',
     user_id: 4
   },
   {
-    title: 'HTML & CSS Expert: available 2023-11-05 from 10:00AM till 11:30AM.',
-    post_text: '5 years programming exprience on front-end, have 1.5 hours expertise available to share online. From 10:00AM to 11:30AM at 2023-11-04 Sunday Morning. If you interested please contact me by email: user6@gmail.com',
+    title: 'When it comes to text editors, I feel like Goldilocks',
+    post_text: 'Falling between two stalls I often find myself torn between the approaches of traditional and modal text editors. ',
+    user_id: 2
+  },
+  {
+    title: 'Simple settings for writing and converting markdown with Sublime Text',
+    post_text: 'Prettify your markdown There are dedicated markdown packages, but if you write in Sublime, here are some very simple tweaks you can make to get a lovely centered column. ',
     user_id: 1
   },
   {
-    title: 'JavaScript Expert: available 2023-11-04 from 08:00AM till 10:00AM.',
-    post_text: '8 years programming exprience on front-end, have two hours expertise available to share online. From 08:00AM to 10:00AM at 2023-11-04 Saturday Morning. If you interested please contact me by email: user5@gmail.com',
-    user_id: 1
-  },
-  {
-    title: 'JavaScript Expert: available 2023-11-04 from 08:00AM till 10:00AM.',
-    post_text: '8 years programming exprience on front-end, have two hours expertise available to share online. From 08:00AM to 10:00AM at 2023-11-04 Saturday Morning. If you interested please contact me by email: user5@gmail.com',
-    user_id: 9
-  },
-  {
-    title: 'JavaScript Expert: available 2023-11-04 from 08:00AM till 10:00AM.',
-    post_text: '8 years programming exprience on front-end, have two hours expertise available to share online. From 08:00AM to 10:00AM at 2023-11-04 Saturday Morning. If you interested please contact me by email: user5@gmail.com',
+    title: 'Logitech MX Master 3/3s scroll wheel fix',
+    post_text: 'You arrived here because you have a Logitech MX Master 3 mouse, and sometimes you try and scroll up and it just does not do anything.',
     user_id: 5
   },
   {
-    title: 'JavaScript Expert: available 2023-11-04 from 08:00AM till 10:00AM.',
-    post_text: '8 years programming exprience on front-end, have two hours expertise available to share online. From 08:00AM to 10:00AM at 2023-11-04 Saturday Morning. If you interested please contact me by email: user5@gmail.com',
+    title: 'Building a line graph with CSS clip-mask',
+    post_text: 'This is not a substitute for d3 or chart.js. It is however, a surprisingly simple and effective way of creating a line graph. ',
     user_id: 3
   },
   {
-    title: 'JavaScript Expert: available 2023-11-04 from 08:00AM till 10:00AM.',
-    post_text: '8 years programming exprience on front-end, have two hours expertise available to share online. From 08:00AM to 10:00AM at 2023-11-04 Saturday Morning. If you interested please contact me by email: user5@gmail.com',
-    user_id: 10
-  },
-  {
-    title: 'JavaScript Expert: available 2023-11-04 from 08:00AM till 10:00AM.',
-    post_text: '8 years programming exprience on front-end, have two hours expertise available to share online. From 08:00AM to 10:00AM at 2023-11-04 Saturday Morning. If you interested please contact me by email: user5@gmail.com',
-    user_id: 8
-  },
-  {
-    title: 'JavaScript Expert: available 2023-11-04 from 08:00AM till 10:00AM.',
-    post_text: '8 years programming exprience on front-end, have two hours expertise available to share online. From 08:00AM to 10:00AM at 2023-11-04 Saturday Morning. If you interested please contact me by email: user5@gmail.com',
+    title: 'Neovim Power Tips: Volume 2',
+    post_text: 'If you want to see the video version of this content, it is on my YouTube channel here.',
     user_id: 3
   },
   {
-    title: 'JavaScript Expert: available 2023-11-04 from 08:00AM till 10:00AM.',
-    post_text: '8 years programming exprience on front-end, have two hours expertise available to share online. From 08:00AM to 10:00AM at 2023-11-04 Saturday Morning. If you interested please contact me by email: user5@gmail.com',
+    title: 'How to animate along an SVG path at the same time the path animates?',
+    post_text: 'I had to create something along these lines (pun intended) recently; a line that animates to nothing with "something" on the end; ',
     user_id: 3
   },
   {
-    title: 'JavaScript Expert: available 2023-11-04 from 08:00AM till 10:00AM.',
-    post_text: '8 years programming exprience on front-end, have two hours expertise available to share online. From 08:00AM to 10:00AM at 2023-11-04 Saturday Morning. If you interested please contact me by email: user5@gmail.com',
-    user_id: 7
-  },
-  {
-    title: 'JavaScript Expert: available 2023-11-04 from 08:00AM till 10:00AM.',
-    post_text: '8 years programming exprience on front-end, have two hours expertise available to share online. From 08:00AM to 10:00AM at 2023-11-04 Saturday Morning. If you interested please contact me by email: user5@gmail.com',
-    user_id: 6
-  },
-  {
-    title: 'JavaScript Expert: available 2023-11-04 from 08:00AM till 10:00AM.',
-    post_text: '8 years programming exprience on front-end, have two hours expertise available to share online. From 08:00AM to 10:00AM at 2023-11-04 Saturday Morning. If you interested please contact me by email: user5@gmail.com',
+    title: 'Getting the context of Web Components',
+    post_text: 'The default nature of Web Components and one of their main selling points, is that they are closed off.  ',
     user_id: 4
   },
   {
-    title: 'JavaScript Expert: available 2023-11-04 from 08:00AM till 10:00AM.',
-    post_text: '8 years programming exprience on front-end, have two hours expertise available to share online. From 08:00AM to 10:00AM at 2023-11-04 Saturday Morning. If you interested please contact me by email: user5@gmail.com',
-    user_id: 6
-  },
-  {
-    title: 'JavaScript Expert: available 2023-11-04 from 08:00AM till 10:00AM.',
-    post_text: '8 years programming exprience on front-end, have two hours expertise available to share online. From 08:00AM to 10:00AM at 2023-11-04 Saturday Morning. If you interested please contact me by email: user5@gmail.com',
-    user_id: 7
+    title: 'A CSS class-naming convention might still be your best choice',
+    post_text: 'I am here to remind you that a naming convention for your CSS, even in 2022, with Cascade Layers, Web Components and more. ',
+    user_id: 2
   }
 ];
 

@@ -1,20 +1,19 @@
 {
-  "name": "mvc-tech-blog",
+  "name": "mvc-tech-blog_huipan",
   "version": "1.0.0",
-  "description": "",
+  "description": "This is a CMS-style blog site, where developers can publish their Tech-blog and comment on other developers' posts.",
   "main": "server.js",
   "scripts": {
-    "test": "jest",
     "start": "node server.js",
     "seed": "node seeds/index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+"
+    "url": "git+https://github.com/HuiPan-Peter/MVC-Tech-Blog_HuiPan"
   },
-  "author": "",
+  "author": "HuiPan",
   "license": "MIT",
-  "homepage": "https://",
+  "homepage": "https://github.com/HuiPan-Peter/MVC-Tech-Blog_HuiPan#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
     "connect-session-sequelize": "^7.1.1",
@@ -24,8 +23,5 @@
     "express-session": "^1.17.1",
     "mysql2": "^2.2.5",
     "sequelize": "^6.5.1"
-  },
-  "devDependencies": {
-    "jest": "^26.6.3"
   }
 }
