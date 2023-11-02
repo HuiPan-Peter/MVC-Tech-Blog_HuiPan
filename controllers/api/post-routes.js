@@ -3,7 +3,7 @@ const sequelize = require('../../config/connection');
 const { Post, User, Comment } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-// get all users
+// get index page load
 router.get('/', withAuth, (req, res) => {
   Post.findAll({
     attributes: [
@@ -33,7 +33,7 @@ router.get('/', withAuth, (req, res) => {
     });
 });
 
-// withAuth deleted for insomnia functionality
+// withAuth deleted post
 router.get('/:id', withAuth, (req, res) => {
   Post.findOne({
     where: {
@@ -74,7 +74,7 @@ router.get('/:id', withAuth, (req, res) => {
 });
 
 router.post('/', withAuth, (req, res) => {
-  // expects {title: 'Tech blog goes public!', post_text: 'random string', user_id: 1}
+  console.log('======from api/post-routes: post("/") =====');
   Post.create({
     title: req.body.title,
     post_text: req.body.post_text,
@@ -87,8 +87,9 @@ router.post('/', withAuth, (req, res) => {
     });
 });
 
-// withAuth deleted for insomnia functionality
+// withAuth deleted post
 router.put('/:id', withAuth, (req, res) => {
+  console.log('======from api/post-routes: put("/:id") =====');
   Post.update(
     {
       title: req.body.title,

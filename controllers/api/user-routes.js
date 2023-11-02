@@ -1,24 +1,6 @@
 const router = require('express').Router();
 const { User, Post, Comment } = require('../../models');
 
-router.post("/", (req, res) => {
-  try {
-      const dbUserData = User.create({
-          username: req.body.username,
-          email: req.body.email,
-          password: req.body.password,
-          isAdmin: req.body.is_admin,
-      });
-      req.session.save(() => {
-          req.session.loggedIn = true;
-          req.session.loggedInUserData = dbUserData;
-          return res.status(200).json(dbUserData);
-      });
-  } catch (err) {
-      console.log(err);
-      return res.status(500).json(err);
-  }
-});
 // get all users
 router.get('/', (req, res) => {
   User.findAll({
@@ -66,6 +48,7 @@ router.get('/:id', (req, res) => {
 });
 
 router.post('/', (req, res) => {
+  // expects {username: 'Lernantino', email: 'lernantino@gmail.com', password: 'password1234'}
   User.create({
     username: req.body.username,
     email: req.body.email,
@@ -85,9 +68,8 @@ router.post('/', (req, res) => {
       res.status(500).json(err);
     });
 });
-
+// user login
 router.post('/login', (req, res) => {
-  // expects {email: 'lernantino@gmail.com', password: 'password1234'}
   User.findOne({
     where: {
       email: req.body.email
@@ -114,7 +96,7 @@ router.post('/login', (req, res) => {
     });
   });
 });
-
+// User Logout
 router.post('/logout', (req, res) => {
   if (req.session.loggedIn) {
     req.session.destroy(() => {
@@ -127,9 +109,6 @@ router.post('/logout', (req, res) => {
 });
 
 router.put('/:id', (req, res) => {
-  // expects {username: 'Lernantino', email: 'lernantino@gmail.com', password: 'password1234'}
-
-  // pass in req.body instead to only update what's passed through
   User.update(req.body, {
     individualHooks: true,
     where: {
