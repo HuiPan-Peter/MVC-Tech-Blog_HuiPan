@@ -1,0 +1,44 @@
+<article class="post">
+    <div class="title">
+        <h2>{{title}}</h2> 
+        <h4>{{user.username}}</h4>
+        <span>{{format_date created_at}}</span>
+        <p>{{post_text}}</p>
+    </div>
+    
+    <div class="meta">
+        <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
+    </div>
+    {{!-- Admin login dashboard, edit post --}}
+    <div class="column is-8 is-offset-2" id="comment-section">
+        {{#each postData.comments as |cmt|}}
+            <article class="message">
+                <div class="message-body">
+                    {{comment}}
+                    <p class="has-text-right"><strong>-
+                        {{user.username}},
+                        {{format_time createdAt}}</strong>
+                        {{#if ../loggedInUserData.isAdmin}}
+                            (<span class="delete-comment" data-id="{{id}}">Delete</span>)</p>
+                        {{/if}}
+                </div>
+            </article>
+        {{/each}}
+    </div>
+    <div class="column is-8 is-offset-2" id="comment-section">
+        {{#each postData.comments as |cmt|}}
+            <article class="message">
+                <div class="message-body">
+                    {{comment}}
+                    <p class="has-text-right"><strong>-
+                        {{user.username}},
+                        {{format_time createdAt}}</strong>
+                        {{#if ../loggedInUserData.isAdmin}}
+                            (<span class="delete-comment" data-id="{{id}}">Delete</span>)</p>
+                        {{/if}}
+                </div>
+            </article>
+        {{/each}}
+    </div>
+
+</article>

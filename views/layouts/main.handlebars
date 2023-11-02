@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nate's Tech Blog</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>
+      <h1>
+        <a href="/">Expertise/Time Sharing Online</a>
+      </h1>
+      <nav>
+        {{#if loggedIn}}
+          {{#if loggedInUserData.isAdmin}}
+              <a
+                  class="navbar-item is-size-5 has-text-weight-semibold"
+                  href="/dashboard"
+              >
+                  Dashboard
+              </a>
+          {{/if}}
+          <a
+              class="navbar-item is-size-5 has-text-weight-semibold"
+              href="/logout/"
+          >
+              Logout
+          </a>
+      {{else}}
+          <a
+              class="navbar-item is-size-5 has-text-weight-semibold"
+              href="/login/"
+          >
+              Login
+          </a>
+          <a
+              class="navbar-item is-size-5 has-text-weight-semibold"
+              href="/signup/"
+          >
+              Signup
+          </a>
+      {{/if}}
+      </nav>
+    </header>
+    <main>
+      {{{ body }}}
+    </main>
+    <footer>
+      Thanks for visiting!
+    </footer>
+  </div>
+
+</body>
+<div
+    class="logged-in-user-id is-invisible"
+>{{loggedInUserData.id}}</div>
+</html>
+
+{{#if loggedIn}}
+<script src="/javascript/logout.js"></script>
+{{/if}}
