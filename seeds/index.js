@@ -1,20 +1,20 @@
 const seedUsers = require('./user-seeds');
 const seedPosts = require('./post-seeds');
 const seedComments = require('./comment-seeds');
-
 const sequelize = require('../config/connection');
 
 const seedAll = async () => {
   await sequelize.sync({ force: true });
-  console.log('--------------');
+  console.log('----User Seed----');
   await seedUsers();
-  console.log('--------------');
 
+  console.log('----Posts Seed----');
   await seedPosts();
-  console.log('--------------');
 
+  console.log('----Comments Seed----');
   await seedComments();
-  console.log('--------------');
+
+  console.log('----All Seeds Inserted----');
 
   process.exit(0);
 };
