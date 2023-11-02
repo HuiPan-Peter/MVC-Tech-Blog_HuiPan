@@ -4,8 +4,6 @@ const sequelize = require('../config/connection');
 
 // create Post model
 class Post extends Model {}
-
-// Nate's Post model
 Post.init(
     {
         id: {
@@ -40,19 +38,5 @@ Post.init(
         modelName: 'post'
       }
 );
-
-// // Alex's Post model
-// class Post extends Model {}
-// // create fields/columns for Post model
-// Post.init(
-//   {
-//       title: DataTypes.STRING,
-//       post_text: DataTypes.STRING
-//   },
-//   {
-//     sequelize
-//   }
-// );
-
 
 module.exports = Post;

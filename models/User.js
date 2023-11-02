@@ -4,7 +4,7 @@ const sequelize = require('../config/connection');
 
 // create User model
 class User extends Model {
-    // set up method to run on instance data (per user) to check password
+    //custom instance method to check user password with bcrypt
   checkPassword(loginPw) {
     return bcrypt.compareSync(loginPw, this.password);
   }
@@ -35,18 +35,15 @@ User.init (
           type: DataTypes.STRING,
           allowNull: false,
           validate: {
-            len: [6]
+            len: [4]
           }
-        },
-        isAdmin: {
-          type: DataTypes.BOOLEAN,
-          allowNull: false,
-        },
-    },
-    {
+        }
+      },
+      {
         hooks: {
-          // set up beforeCreate lifecycle "hook" functionality
+          //beforeCreate hook is used to work with data before a new instance is created
           async beforeCreate(newUserData) {
+            //encrypt password user passed in
             newUserData.password = await bcrypt.hash(newUserData.password, 10);
             return newUserData;
           },

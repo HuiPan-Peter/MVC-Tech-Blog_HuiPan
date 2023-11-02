@@ -11,11 +11,10 @@ router.get('/', withAuth, (req, res) => {
       res.status(500).json(err);
     });
 });
-
+//create comment
 router.post('/', withAuth, (req, res) => {
   // check the session
   if (req.session) {
-    // expects => {comment_text: "This is the comment", user_id: 1, post_id: 2}
     Comment.create({
       comment_text: req.body.comment_text,
       user_id: req.session.user_id,
@@ -28,7 +27,7 @@ router.post('/', withAuth, (req, res) => {
       });
   }
 });
-
+//delete comment
 router.delete('/:id', withAuth, (req, res) => {
   Comment.destroy({
     where: {

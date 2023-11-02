@@ -1,3 +1,4 @@
+//submit a comment from the client to api
 async function commentFormHandler(event) {
     event.preventDefault();
 

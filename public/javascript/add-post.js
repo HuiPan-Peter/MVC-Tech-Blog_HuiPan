@@ -1,3 +1,4 @@
+//update post via client by calling api
 async function newFormHandler(event) {
     event.preventDefault();
 
