@@ -91,7 +91,7 @@ THEN I am able to view posts and comments but I am prompted to log in again befo
 
 ## Walkthrough Video Demo and Screenshot of the Application
 
-## [https://github.com/HuiPan-Peter/ORM_E-Commerce-Back-End_HuiPan/tree/main/videoDemo%26Screenshots](https://github.com/HuiPan-Peter/ORM_E-Commerce-Back-End_HuiPan/tree/main/videoDemo%26Screenshots)
+## [https://github.com/HuiPan-Peter/MVC-Tech-Blog_HuiPan/tree/main/public/screenshots](https://github.com/HuiPan-Peter/MVC-Tech-Blog_HuiPan/tree/main/public/screenshots)
 
 ## Contributions
 
