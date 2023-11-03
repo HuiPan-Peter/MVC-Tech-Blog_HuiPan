@@ -16,7 +16,7 @@
 ## Description
 
 This is a CMS-style blog site, where developers can publish their Tech-blog and comment on other developers’ posts.
-
+You could open this app hosted on Heroku at [Heroku Deployment](https://evening-island-98425-a6f8429c62d5.herokuapp.com) 
 ```
 User Story:
 AS A developer who writes about tech
