@@ -74,7 +74,7 @@ THEN I am able to view posts and comments but I am prompted to log in again befo
   "mysql2": "^2.2.5",
   "sequelize": "^6.5.1"
   };
-- 3.Under node command-line run `npm i` to install dotenv, express, mysql2 and sequelize;
+- 3.Under node command-line run `npm i` to install these dependencies;
 
 ## Usage
 
