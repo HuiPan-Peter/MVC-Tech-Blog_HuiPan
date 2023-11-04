@@ -70,6 +70,7 @@ router.post('/', (req, res) => {
 });
 // user login
 router.post('/login', (req, res) => {
+  console.log('======from api/user-routes: post("/login") =====');
   User.findOne({
     where: {
       email: req.body.email
